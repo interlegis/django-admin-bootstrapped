@@ -12,16 +12,14 @@ of modification on your side, just add it to the installed apps.
 Requirements
 ------------
 
--  Django ``==1.8``
+-  Django ``1.10 and 1.11``
 
-With Django ``1.6`` use version ``2.3.6``
-
-With Django ``1.7`` use version ``2.4.0``
+With Django older version of Django, user the original package -> https://github.com/django-admin-bootstrapped/django-admin-bootstrapped
 
 Installation
 ------------
 
-1. Download it from PyPi with ``pip install django-admin-bootstrapped``
+1. Download it from PyPi with ``pip install https://github.com/rubgombar1/django-admin-bootstrapped/archive/master.zip``
 2. Add into the ``INSTALLED_APPS`` **before** ``'django.contrib.admin'``:
 
 ::
