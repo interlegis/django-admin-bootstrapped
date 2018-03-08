@@ -27,6 +27,7 @@
                         <div class="controls col-md-9">
                             <div class="checkbox">
                                 {% dab_field_rendering field.field %} {% if field.field.help_text %}<span class="help-block">{{ field.field.help_text|safe }}</span>{% endif %}
+                                {% if not field.is_readonly and field.errors %}<span class="text-danger">{{ field.errors|striptags }}</span>{% endif %}
                             </div>
                         </div>
                         {% else %}
