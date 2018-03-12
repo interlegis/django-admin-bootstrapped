@@ -90,7 +90,7 @@
                         {% endblock languages %}
                         {% block logs %}
                         <li class="dropdown" id="recent-actions-module">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">{% trans 'Recent Actions' %} <b class="caret"></b></a>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">{% trans 'Recent actions' %} <b class="caret"></b></a>
                             {% load log %}
                             {% get_admin_log 10 as admin_log for_user user %}
                             <ul class="dropdown-menu">
