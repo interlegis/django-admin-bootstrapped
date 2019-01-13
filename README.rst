@@ -31,8 +31,8 @@ Installation
 Configuration
 -------------
 
-For a full bootstrap3 experience you may want to use a custom renderer for the fields.
-There's one available in tree that requires the ``django-bootstrap3`` application installed.
+For a full bootstrap4 experience you may want to use a custom renderer for the fields.
+There's one available in tree that requires the ``django-bootstrap4`` application installed.
 You have to add to your project settings file:
 ::
 

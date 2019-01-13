@@ -30,7 +30,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = (
-    'bootstrap3',
+    'bootstrap4',
     'django_admin_bootstrapped',
     'filer',
     'easy_thumbnails',

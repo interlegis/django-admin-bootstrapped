@@ -16,7 +16,7 @@ env:
     - DJANGO_VERSION=1.8
 
 install:
-    pip install django-bootstrap3 django-filer Django==$DJANGO_VERSION
+    pip install django-bootstrap4 django-filer Django==$DJANGO_VERSION
 
 script:
     python setup.py test

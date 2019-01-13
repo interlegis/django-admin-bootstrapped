@@ -5,16 +5,16 @@ from django.contrib.admin.widgets import (AdminDateWidget, AdminTimeWidget,
                                           AdminSplitDateTime, RelatedFieldWidgetWrapper)
 from django.forms import (FileInput, CheckboxInput, RadioSelect, CheckboxSelectMultiple)
 
-from bootstrap3 import renderers
+from bootstrap4 import renderers
 try:
-    from bootstrap3.utils import add_css_class
+    from bootstrap4.utils import add_css_class
 except ImportError:
-    from bootstrap3.html import add_css_class
-from bootstrap3.text import text_value
+    from bootstrap4.html import add_css_class
+from bootstrap4.text import text_value
 
 class BootstrapFieldRenderer(renderers.FieldRenderer):
     """
-    A django-bootstrap3 field renderer that renders just the field
+    A django-bootstrap4 field renderer that renders just the field
     """
     def render(self):
         # Hidden input requires no special treatment

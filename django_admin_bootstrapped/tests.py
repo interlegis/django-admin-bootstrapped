@@ -6,9 +6,9 @@ from django.template import Template, Context
 from django import forms
 
 try:
-    from bootstrap3 import renderers
+    from bootstrap4 import renderers
 except ImportError:
-    # nothing to test if we don't have django-bootstrap3 installed
+    # nothing to test if we don't have django-bootstrap4 installed
     pass
 else:
     from .renderers import BootstrapFieldRenderer
