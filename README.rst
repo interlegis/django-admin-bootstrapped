@@ -19,7 +19,7 @@ With Django older version of Django, user the original package -> https://github
 Installation
 ------------
 
-1. Download it from PyPi with ``pip install https://github.com/rubgombar1/django-admin-bootstrapped/archive/master.zip``
+1. Download it from PyPi with ``pip install https://github.com/interlegis/django-admin-bootstrapped/archive/master.zip``
 2. Add into the ``INSTALLED_APPS`` **before** ``'django.contrib.admin'``:
 
 ::
