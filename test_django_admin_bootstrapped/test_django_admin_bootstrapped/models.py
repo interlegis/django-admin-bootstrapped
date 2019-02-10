@@ -3,14 +3,14 @@ from django.db import models
 
 class TestMe(models.Model):
     test_m2m = models.ManyToManyField('self', blank=True, help_text="Lorem dolor")
-    test_ip = models.IPAddressField(help_text="Lorem dolor")
+    test_ip = models.GenericIPAddressField(help_text="Lorem dolor")
     test_url = models.URLField(help_text="Lorem dolor")
     test_int = models.IntegerField(help_text="Lorem dolor")
     test_img = models.ImageField(upload_to='dummy', blank=True)
     test_file = models.FileField(upload_to='dummy', blank=True)
     test_date = models.DateField(help_text="Lorem dolor")
     test_char = models.CharField(max_length=50, help_text="Lorem dolor")
-    test_bool = models.BooleanField(help_text="Lorem dolor")
+    test_bool = models.BooleanField(help_text="Lorem dolor", default=False)
     test_time = models.TimeField(help_text="Lorem dolor")
     test_slug = models.SlugField(help_text="Lorem dolor")
     test_text = models.TextField(help_text="Lorem dolor")
@@ -24,6 +24,9 @@ class TestMe(models.Model):
     test_nullbool = models.NullBooleanField(help_text="Lorem dolor")
     test_filepath = models.FilePathField(blank=True, help_text="Lorem dolor")
     test_positive_small_int = models.PositiveSmallIntegerField(help_text="Lorem dolor")
+
+    def get_absolute_url(self):
+        return ''
 
     class Meta:
         verbose_name = u'Test me'
@@ -39,11 +42,12 @@ class TestMeProxyForFieldsets(TestMe):
 
 class TestThat(models.Model):
     that = models.ForeignKey(TestMe, help_text="Lorem dolor")
-    test_ip = models.IPAddressField(help_text="Lorem dolor")
+    test_ip = models.GenericIPAddressField(help_text="Lorem dolor")
     test_url = models.URLField(help_text="Lorem dolor")
     test_int = models.IntegerField(help_text="Lorem dolor")
     test_date = models.DateField(help_text="Lorem dolor")
-    test_bool = models.BooleanField(help_text="Lorem dolor")
+    test_bool = models.BooleanField(help_text="Lorem dolor", default=True)
+    test_fk = models.ForeignKey('TestSortable', help_text="Lorem dolor", null=True, blank=True)
 
     class Meta:
         verbose_name = u'Test that'
